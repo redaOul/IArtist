@@ -28,7 +28,9 @@
                     <?php
                     $sql = $database->prepare("SELECT * FROM ARTISTE");
                     $sql->execute();
-                    foreach($sql as $result): ?>
+                    foreach($sql as $result): 
+                    if (!file_exists($result['PHOTOP'])) $result['PHOTOP'] = "./PROJET/Images/famous/artist/Unknown.png";
+                    ?>
                         <div class="grid-image">
                             <a href="./Gallery.php?famous-id=<?= $result['ARTISTEID']; ?>">
                                 <h1 ><?= $result['NOM']; ?></h1>
