@@ -48,6 +48,9 @@
 									foreach($sql1 as $result): ?>
 										<li class="msg-container">
 											<a style="text-decoration: none;" href="./Chat.php?user-id=<?= $result['UTILISATEURID'] ?>" >
+												<?php
+													if (!file_exists($result['PHOTOP'])) $result['PHOTOP'] = "./PROJET/Images/Images/photo-profil/Unknown.png";
+												?>
 												<img src="<?= $result['PHOTOP'] ?>" class="img">
 												<h1 id="account-name" class="account-name"><?= $result['NOM'] ?></h1>
 												<?php 
@@ -84,6 +87,9 @@
 									foreach ($sql2 as $result): ?>
 										<li class="msg-container">
 											<a style="text-decoration: none;" href="./Chat.php?user-id=<?= $result['UTILISATEURID'] ?>" >
+												<?php
+													if (!file_exists($result['PHOTOP'])) $result['PHOTOP'] = "./PROJET/Images/Images/photo-profil/Unknown.png";
+												?>
 												<img src="<?= $result['PHOTOP'] ?>" class="img">
 												<h1 id="account-name" class="account-name"><?= $result['NOM'] ?></h1>
 												<?php 

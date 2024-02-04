@@ -16,6 +16,9 @@
         $sql->bindParam("VAR1", $_GET['img-id']);
         $sql->execute();
         $res = $sql->fetchObject();
+        
+        if (!file_exists($res->DESTINATION)) $res->DESTINATION = "./PROJET/Images/Images/painting/images.png";
+
         $resJSON = json_encode($res);
         echo $resJSON;
     }

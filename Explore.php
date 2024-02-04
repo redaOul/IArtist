@@ -38,6 +38,9 @@
                     foreach($sql as $result): ?>
                         <div class="grid-image">
                             <h1 id="Drawing_Name"><?= $result['NOM']; ?></h1>
+                            <?php
+                                if (!file_exists($result['DESTINATION'])) $result['DESTINATION'] = "./PROJET/Images/Images/painting/images.png";
+                            ?>
                             <img onclick="imagemodal(this.id)" id="<?= $result['TABLEAUID'] ?>" class="Painting" src="<?= $result['DESTINATION']; ?>">
                         </div>
                     <?php endforeach; ?>
