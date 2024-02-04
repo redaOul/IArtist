@@ -25,7 +25,8 @@
 			if (isset($_GET['manage'])) : ?>
 				<body onload="editmodal();">
 			<? endif; 
-			include './header.php'; ?>
+			include './header.php';
+		?>
 		<ul>   <!-- select wich button will appear -->
 			<?php
 				if (empty($_GET['famous-id'])) {
@@ -67,6 +68,8 @@
 				$sql1->bindParam("VAR1", $varID);
 				$sql1->execute();
 				$sql1res = $sql1->fetchObject();
+				if (!file_exists($sql1res->PHOTOC)) $sql1res->PHOTOC = "./PROJET/Images/Images/cover-profil/unnamed.jpg";
+				if (!file_exists($sql1res->PHOTOP)) $sql1res->PHOTOP = "./PROJET/Images/Images/photo-profil/Unknown.png";
 			?>
 			<header style="background-image: url('<?= $sql1res->PHOTOC ?>') !important;" ></header>   <!-- edit on css to change cover -->
 			<div class="account-img"> <img class="photo" src="<?= $sql1res->PHOTOP ?>"/> </div>
@@ -147,9 +150,11 @@
 								<div class="grid-image">
 									<?php if ($varsign == 1): ?>
 											<h1 id="Drawing_Name"><?php echo $sql2res['NOM']; ?></h1>
+											<?php if (!file_exists($sql2res['DESTINATION'])) $sql2res['DESTINATION'] = "./PROJET/Images/Images/painting/images.png"; ?>
 											<img onclick="imagemodal(this.id)" id="<?= $sql2res['TABLEAUID'] ?>" class="Painting" src="<?= $sql2res['DESTINATION'] ?>">
 										<? else: ?>
 											<h1 id="Drawing_Name"><?php echo $sql2res['NOM']; ?></h1>
+											<?php if (!file_exists($sql2res['DESTINATION'])) $sql2res['DESTINATION'] = "./PROJET/Images/famous/drawing/Unknown.png"; ?>
 											<img class="Painting" src="<?= $sql2res["DESTINATION"] ?>">
 										<? endif; ?>
 								</div>
