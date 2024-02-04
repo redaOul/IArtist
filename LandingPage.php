@@ -38,6 +38,7 @@
                                 $user = $login->fetchObject();
                                 session_start();
                                 $_SESSION['user'] = $user;
+                                if (!file_exists($_SESSION['user']->PHOTOP)) $_SESSION['user']->PHOTOP = "./PROJET/Images/Images/photo-profil/Unknown.png";
                                 header("location: Home.php", true);
                             }
                             else {
