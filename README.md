@@ -28,6 +28,8 @@ Pour utiliser le projet, vous devez vous inscrire sur le site avec un nom d'util
 - Fenêtre pour plus d'informations à propos le dessin: Vous pouvez avoir des informations détaillées sur un projet en cliquant sur l'image, la fenêtre suivante apparaît. Vous pouvez voir le nom de l'auteur, la date de création, la description et les tags du projet.
 - **Chat:** Vous pouvez communiquer avec les autres utilisateurs en leur envoyant des messages privés.
 
+Pour consulter la structure de la base des données, vous pouvez consulter le fichier IArtist.sql.
+
 ## Contribution
 
 Si vous souhaitez contribuer au projet, vous pouvez nous contacter par email à oulemhourreda@gmail.com. Nous apprécions toute suggestion, feedback ou correction de bug.
