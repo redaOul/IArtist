@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    background: #e7def8;
+}
+/*================= MAIN =================*/
+
+nav{ /* hide shadom from header.php */
+    -webkit-box-shadow: 0px 0px 0px 0px #00ff26 !important; 
+    box-shadow: 0px 0px 0px 0px #00ff26 !important;
+}
+
+.container{
+    background-color: #c3b2e0;
+    margin: 5% 13% 2% 13%;
+    min-width: 800px;
+    height: 700px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.left{
+    float: left;
+    background-color: #4B3983;
+    width: 35%;
+    height: 700px;
+    border-radius: 30px 0 0 30px;
+}
+
+.left .head{
+    width: 100%;
+    height: 60px;
+    border-radius: 30px 0 0 0;
+}
+.left .head form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 12px;
+    bottom: 12px;
+    left: 12px;
+    width: 90%;
+    border: #FECD41 2px solid;
+    border-radius: 30px;
+}
+
+.left .head form .input{
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    color: #FECD41;
+    padding: 7px;
+    padding-left: 0px;
+    position: relative;
+    left: -10px;
+    outline: none;
+}
+
+.left .head form .input::-webkit-input-placeholder{
+    color: #FECD41;
+}
+
+.left .head form .button{
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    outline: none;
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+.nullusers h2{
+    position: relative;
+    top: 255px;
+    text-align: center;
+    color: #c3b2e0;
+    font-size: 20px;
+}
+
+.left .list-container{
+    width: 100%;
+    height: calc(100% - 60px);
+    border-radius: 0 0 0 30px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.left .list-container .list{
+    width: 100%;
+    height: 100%;
+    list-style-type:none;
+    border-radius: 0 0 0 30px;
+}
+
+.left .list-container .list .msg-container{
+    width: 93%;
+    height: 70px;
+    margin-left: 3.5%;
+    border-bottom: #FECD41 2px solid;
+}
+
+.left .list-container .list .msg-container .img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    margin: 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.left .list-container .list .msg-container .account-name{
+    color: #FECD41;
+    font-size: 18px;
+    padding-top: 13px;
+}
+
+.left .list-container .list .msg-container .time{
+    float: right;
+    font-size: 9px;
+    color: #e7def8;
+    position: relative;
+    bottom: 18px;
+    right: 8px;
+}
+
+.left .list-container .list .msg-container .last-msg{
+    color: #c3b2e0;
+    font-size: 13px;
+    position: relative;
+    top: 4px;
+}
+
+.right{
+    float: right;
+    width: 65%;
+    height: 700px;
+    border-radius: 0 30px 30px 0;
+}
+
+.nullcontent h2{
+    position: relative;
+    top: 290px;
+    text-align: center;
+    color: #4B3983;
+    font-size: 55px;
+}
+
+.right .head{
+    background-color: #4B3983;
+    width: 100%;
+    height: 70px;
+    border-radius: 0 30px 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    box-shadow: -7px 10px 20px #4B3983;
+}
+
+.right .head span{
+    color: #c3b2e0;
+    position: relative;
+    left: 20px;
+    font-size: 15px;
+}
+
+.right .head span label{
+    color: #FECD41;
+    position: relative;
+    left: 5px;
+    font-size: 35px;
+}
+
+.right .content{
+    width: 100%;
+    height: 575px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.right .content .receive{
+    word-wrap: break-word;
+    background-color: #9D7ED8;
+    color: #FECD41;
+    width: 70%;
+    padding: 7px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.right .content .send{
+    word-wrap: break-word;
+    background-color: #ffffff;
+    color: #4B3983;
+    width: 70%;
+    padding: 7px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.right .content .send sub, .receive sub{
+    font-size: 12px;
+    float: right;
+    position: relative;
+    bottom: -9px;
+    margin-bottom: 4px;
+    color: #4B3983;
+}
+
+.right .footer{
+    background-color: #4B3983;
+    width: 100%;
+    height: 55px;
+    border-radius: 0 0 30px 0;
+}
+
+.right .footer form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 5px;
+    width: 98%;
+    border: #FECD41 2px solid;
+    border-radius: 30px;
+}
+.right .footer form .input{
+    width: 87.5%;
+    background-color: transparent;
+    border: none;
+    color: #FECD41;
+    padding: 10px;
+    margin-left: 3px;
+    font-size: 15px;
+    outline: none;
+}
+
+.right .footer form .input::-webkit-input-placeholder{
+    color: #FECD41;
+    font-size: 15px;
+}
+
+.right .footer form .button{
+    background-color: transparent;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    outline: none;
+    float: right;
+    position: absolute;
+    right: 10px;
+}

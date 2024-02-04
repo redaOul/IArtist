@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    background: #e7def8;
+    position: sticky;
+    top: 0;
+}
+/*================= HEADER =================*/
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;
+    background: #4B3983;
+    border-radius: 0 0 30px 30px;
+    height: 130px;
+}
+.logo{
+    margin-right: 45px;
+}
+.account span{
+    color: #FECD41;
+    font-size: 16px;
+    font-weight: 10;
+    margin-left: 15px;
+}
+.account input{
+    background-color: transparent;
+    border: 1px solid #FECD41;
+    color: #FECD41;
+    border-radius: 5px;
+    padding: 3px 7px;
+    outline: none;
+}
+.account input::-webkit-input-placeholder{
+    color: #FECD41;
+}
+.account button{
+    background: #FECD41;
+    color: #4B3983;
+    border: 0px;
+    border-radius: 5px;
+    padding: 3px 15px;
+    margin-left: 15px;
+}
+/*================= MAIN =================*/
+
+main{
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -15%);
+}
+
+
+main div{
+    font-size: 40px;
+    color: #4B3983;
+    margin-bottom: 30px;
+}
+main form{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: inline-block;
+}
+main form input{
+    display: block;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid #4B3983;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #4B3983;
+    width: 350px;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+}
+main form input::-webkit-input-placeholder{
+    color: #4B3983;
+}
+main form button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: #4B3983;
+    color: #e7def8;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+}

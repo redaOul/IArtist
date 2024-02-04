@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    background: #e7def8;
+}
+/*================= HEADER =================*/
+.head-button{
+    list-style-type: none;
+    position: fixed;
+    cursor: pointer;
+    top: 95px;
+    left: 100px;
+    width: 90px;
+    height: 30px;
+    background-color: #4B3983;
+    border: none;
+    color: #e7def8;
+    font-size: 17px;
+    padding-bottom: 4px;
+    border-radius: 15px;
+    z-index: 200;
+}
+/*================= MAIN =================*/
+main{
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15px;
+}
+header {
+    background: #eee;
+    border-radius: 0 0 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+}
+.photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: -150px;
+    margin-left: 40px;
+    border-radius: 100px;
+    border: 4px solid #e7def8;
+}
+.account-info{
+    margin-left: 230px;
+    margin-top: -50px;
+    color: #4B3983;
+}
+.account-info .name{
+    font-size: 25px;
+}
+.account-info .desc{
+    font-size: 15px;
+    margin-top: 7px;
+    margin-left: 20px;
+}
+main .add-drawing {
+    width: 550px;
+    background-color: #c3b2e0;
+    border-radius: 30px;
+    margin: auto;
+}
+main .end-drawing{
+    width: 100%;
+    background-color: #c3b2e0;
+    border-radius: 30px;
+    margin: auto;
+}
+main .add-drawing h2{
+    text-align: center;
+    color: #4B3983;
+    font-size: 25px;
+}
+main .end-drawing h2{
+    text-align: center;
+    color: #4B3983;
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+main .add-drawing form{
+    color: #4B3983;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.image-upload{
+    margin-bottom: 10px;
+}
+.image-upload>input {
+    display: none;
+}
+main .add-drawing form img, .model-layerB .image-upload img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#output{
+    width: 400px;
+    border-radius: 25px;
+}
+#output1{
+    width: 200px;
+    border-radius: 25px;
+}
+#output2{
+    height: 200px;
+    border-radius: 25px;
+}
+main .add-drawing form .name, select{
+    background: transparent;
+    border: 2px solid #4B3983;
+    border-radius: 15px;
+    color: #4B3983;
+    padding: 1px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+main .add-drawing form input::-webkit-input-placeholder{
+    color: #4B3983;
+}
+main .add-drawing form textarea{
+    background: transparent;
+    border: 2px solid #4B3983;
+    border-radius: 15px;
+    color: #4B3983;
+    padding: 3px;
+    padding-left: 15px;
+    margin-top: 10px;
+    font-size: 17px;
+    width: 520px;
+    height:70px;
+    outline: none;
+    resize: none;
+}
+main .add-drawing form .button{
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+main div form .button .add{
+    background-color: #4B3983;
+    color: #e7def8;
+    font-size: 13px;
+    padding: 5px;
+    width: 65px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+main div form .button .cancel{
+    background: transparent;
+    border: 2px solid #4B3983;
+    color: #4B3983;
+    font-size: 13px;
+    padding: 3px;
+    width: 65px;
+    border-radius: 15px;
+    margin-left: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.container{
+    justify-content: space-between;
+    margin: 30px 1%;
+}
+.gallery{
+    columns: 4;
+    column-gap: 16px;
+}
+.gallery .grid-image{
+    display: inline-block;
+    margin-bottom: 16px;
+    position: relative;
+    width: 100%;
+}
+.gallery .grid-image img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.grid-image:hover{
+    transition: 400ms;
+    transform: scale(1.05);
+    overflow: hidden;
+}
+.grid-image h1{  /* remove .grid-image */
+    position: absolute;
+    padding: 5px;
+    bottom: 10px;
+    left: 7px;
+    font-size: 15px;
+    background: #FECD41;
+    color: #4B3983;
+    border-radius: 30px;
+    opacity: 0;
+    z-index: 1;
+    transition: ease-in-out;
+}
+.grid-image:hover h1{
+    opacity: 1;
+}
+
+.model-layerA{
+    background-color: #e7def89e;
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: 250;
+    visibility: hidden;
+    opacity: 0;
+}
+.model-layerA.active{
+    visibility: visible;
+    opacity: 1;
+}
+.model-layerA .model-container{
+    background-color: #e7def8;
+    border: 5px solid #FECD41;
+    width:800px;
+    height: 500px;
+    border-radius: 30px;
+}
+.model-layerA .model-container .back-icon{
+    width: 70px;
+    margin-top: -40px;
+    cursor: pointer;
+}
+.model-layerA .model-container .image-bloc{
+    float: left;
+    height: 500px;
+    width: 50%;
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.model-layerA .model-container .image-bloc img{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+.model-layerA .model-container .content-bloc{
+    float: right;
+    height: 500px;
+    width: 50%;
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    align-items: center;
+}
+.model-layerA .model-container .content-bloc div{
+    max-width: 350px;
+    max-height: 460px;
+    margin-top: -150px;
+    margin-left: 30px;
+}
+
+.model-layerA .model-container .content-bloc div #DName{
+    font-size: 30px;
+    color: #4B3983;
+}
+
+.model-layerA .model-container .content-bloc div #UName, #DType{
+    font-size: 18px;
+    text-decoration: none;
+    color: #4B3983;
+    margin-left: 10px;
+}
+
+.model-layerA .model-container .content-bloc div .paracontainer{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-top: 20px;
+    margin-bottom: -190px;
+    height: 250px;
+    max-width: 300px;
+}
+
+.model-layerA .model-container .content-bloc div #DDescription{
+    margin-top: 20px;
+    font-size: 15px;
+    color: #4B3983;
+}
+
+.model-layerB{
+    background-color: #e7def89e;
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: 250;
+    visibility: hidden;
+    opacity: 0;
+}
+.model-layerB.active{
+    visibility: visible;
+    opacity: 1;
+}
+.model-layerB .model-container{
+    background-color: #e7def8;
+    border: 5px solid #FECD41;
+    width: 800px;
+    height: 500px;
+    border-radius: 30px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.model-layerB .model-container form{
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 20px;
+    color: #4B3983;
+}
+.model-layerB .model-container form input{
+    background: transparent;
+    border: 2px solid #4B3983;
+    border-radius: 15px;
+    color: #4B3983;
+    padding: 3px;
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 180px;
+    font-size: 17px;
+    outline: none;
+}
+.model-layerB .model-container form input::-webkit-input-placeholder{
+    color: #4B3983;
+}
+.model-layerB .model-container form textarea{
+    background: transparent;
+    border: 2px solid #4B3983;
+    border-radius: 15px;
+    color: #4B3983;
+    padding: 3px;
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 180px;
+    font-size: 17px;
+    width: 520px;
+    height: 90px;
+    outline: none;
+    resize: none;
+}
+.model-layerB .model-container form .button{
+    width: 150px;
+    height: 35px;
+    position: relative;
+    left: 550px;
+    margin-bottom: 10px;
+}
+.model-layerB .model-container form .save{
+    background-color: #4B3983;
+    color: #e7def8;
+    font-size: 17px;
+    padding: 5px;
+    width: 65px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.model-layerB .model-container form .cancel {
+    background: transparent;
+    border: 2px solid #4B3983;
+    color: #4B3983;
+    font-size: 17px;
+    padding: 3px;
+    width: 65px;
+    border-radius: 15px;
+    margin-left: 10px;
+    outline: none;
+    cursor: pointer;
+}

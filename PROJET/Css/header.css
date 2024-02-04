@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;
+    background: #4B3983;
+    border-radius: 0 0 20px 20px;
+    position: sticky;
+    top: 0;
+    -webkit-box-shadow: 0px 50px 50px 36px #e7def8; 
+    box-shadow: 0px 50px 50px 36px #e7def8;
+    z-index: 100;
+}
+.logo{
+    width: 160px;
+    margin-right: 45px;
+}
+.logo, .account{
+    display: flex;
+    align-items: center;
+}
+.navigation li{
+    list-style: none;
+    display: inline-block;
+}
+.navigation li img{
+    width: 28px;
+    margin: 0 15px;
+}
+
+.head{
+    width: 15%;
+}
+
+.head form{
+    position: relative;
+    border: #FECD41 2px solid;
+    border-radius: 30px;
+}
+
+.head form .input{
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    color: #FECD41;
+    padding: 7px;
+    padding-left: 0px;
+    position: relative;
+    left: 10px;
+    outline: none;
+}
+
+.head form .input::-webkit-input-placeholder{
+    color: #FECD41;
+}
+
+.head form .button{
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    outline: none;
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+.account img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 45px;
+}
+
+section{
+    position: fixed;
+    background-color: #4B3983;
+    border-radius: 30px;
+    width: 230px;
+    height: 250px;
+    top: 90px;
+    right: 5%;
+    z-index: 400;
+    visibility: hidden;
+    opacity: 0;
+}
+
+section.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+section img{
+    position: relative;
+    left: 65px;
+    top: 20px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+section ul{
+    list-style-type: none;
+    margin-top: 30px;
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 18px;
+}
+section ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+section ul li button{
+    background-color: #e7def8;
+    border: none;
+    color: #4B3983;
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 2px 13px;
+    margin-left: 53px;
+    margin-top: 20px;
+    cursor: pointer;
+}

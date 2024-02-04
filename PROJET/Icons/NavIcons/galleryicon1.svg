@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41">
+  <g id="Group_31" data-name="Group 31" transform="translate(-235 -431)">
+    <path id="ic_photo_library_24px" d="M35,25.1V5.3A3.31,3.31,0,0,0,31.7,2H11.9A3.31,3.31,0,0,0,8.6,5.3V25.1a3.31,3.31,0,0,0,3.3,3.3H31.7A3.31,3.31,0,0,0,35,25.1ZM16.85,18.5,20.2,22.972l4.9-6.122,6.6,8.25H11.9ZM2,8.6V31.7A3.31,3.31,0,0,0,5.3,35H28.4V31.7H5.3V8.6Z" transform="translate(233 437)" fill="#e7def8"/>
+    <text id="my" transform="translate(242 450)" font-size="20" font-family="Caveat-Medium, Caveat" font-weight="500"><tspan x="0" y="0">my</tspan></text>
+  </g>
+</svg>
